@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Merry Christmas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="assets/audio/christmas.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Greeting -->
+  <h1 id="mainGreeting">Wishing you a very Merry Christmas, Saikat!</h1>
+  <p>
+    May this festive season bring you joy, peace, good health, and success.  
+    May your days be filled with warmth, happiness, and cherished moments with your loved ones.  
+    <br><br>
+    Warm Christmas wishes,<br>
+    <strong>Arghya</strong>
+  </p>
+
+  <!-- Snow + Confetti logic -->
+  <script src="script.js"></script>
+
+  <!-- Trigger music playback after first click -->
+  <script>
+    document.body.addEventListener('click', () => {
+      document.querySelector('audio').play();
+    });
+  </script>
+  <script>
+  document.body.addEventListener('click', () => {
+    const audio = document.getElementById('bgMusic');
+    audio.play();
+  }, { once: true });
+</script>
+
+</body>
+</html>
